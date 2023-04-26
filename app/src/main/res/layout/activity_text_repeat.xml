@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    android:fillViewport="true"
+    tools:context=".TextRepeatActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/adView"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12sp"
+                app:cardBackgroundColor="@color/dark_header"
+                app:cardCornerRadius="8sp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/goback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15sp"
+                        app:cardBackgroundColor="@color/dark_green"
+                        app:cardCornerRadius="26sp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:padding="8sp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/baseline_arrow_back_24"
+                                app:tint="@color/Lavender" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8sp"
+                                android:layout_marginEnd="8sp"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Go Back"
+                                android:textColor="@color/Lavender" />
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="25sp"
+                        android:layout_marginTop="15sp"
+                        android:layout_toRightOf="@id/goback"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="Text Repeater"
+                        android:textColor="@color/off_white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/goback"
+                        android:layout_marginStart="12sp"
+                        android:layout_marginTop="12sp"
+                        android:layout_marginEnd="12sp"
+                        android:layout_marginBottom="12sp"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="Repeat Text as much as you want"
+                        android:textColor="@color/off_white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/repeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Repeat Times"
+                    android:inputType="number"
+                    android:padding="12sp"
+                    android:textColor="@color/off_white"
+                    android:textColorHint="@color/Lavender" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:padding="12sp"
+                        android:text="Need new line??"
+                        android:textColor="@color/off_white" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/newLineSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:thumb="@drawable/switch_thumb"
+                        app:track="@drawable/switch_track" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="12sp"
+                android:background="@drawable/round"
+                android:fontFamily="@font/poppins"
+                android:gravity="top"
+                android:hint="Your Message"
+                android:inputType="textMultiLine"
+                android:padding="12sp"
+                android:textColor="@color/off_white"
+                android:textColorHint="@color/Lavender" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/result"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/poppins"
+                        android:padding="12sp"
+                        android:text="@string/your_result_will_be_here"
+                        android:textColor="@color/off_white" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <Button
+                android:id="@+id/repeatbtn"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12sp"
+                android:backgroundTint="@color/dark_green"
+                android:fontFamily="@font/poppins"
+                android:padding="12sp"
+                android:text="Repeat Text"
+                android:textSize="17sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                app:cardBackgroundColor="@color/dark_header"
+                app:cardCornerRadius="26sp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:padding="12sp">
+
+                    <ImageView
+                        android:layout_width="28sp"
+                        android:layout_height="28sp"
+                        android:src="@drawable/round_delete_24"
+                        app:tint="@color/Lavender" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12sp"
+                        android:layout_marginEnd="8sp"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="Delete"
+                        android:textColor="@color/Lavender"
+                        android:textSize="22sp" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/dark_header"
+                    app:cardCornerRadius="26sp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:padding="12sp">
+
+                        <ImageView
+                            android:layout_width="28sp"
+                            android:layout_height="28sp"
+                            android:src="@drawable/share"
+                            app:tint="@color/Lavender" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12sp"
+                            android:layout_marginEnd="8sp"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:text="Share"
+                            android:textColor="@color/Lavender"
+                            android:textSize="22sp" />
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/dark_header"
+                    app:cardCornerRadius="26sp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:padding="12sp">
+
+                        <ImageView
+                            android:layout_width="28sp"
+                            android:layout_height="28sp"
+                            android:src="@drawable/copy"
+                            app:tint="@color/Lavender" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12sp"
+                            android:layout_marginEnd="8sp"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:text="Copy"
+                            android:textColor="@color/Lavender"
+                            android:textSize="22sp" />
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

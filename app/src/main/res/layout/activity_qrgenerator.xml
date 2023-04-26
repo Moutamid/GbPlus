@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    android:fillViewport="true"
+    tools:context=".QRGeneratorActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/adView"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12sp"
+                app:cardBackgroundColor="@color/dark_header"
+                app:cardCornerRadius="8sp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/goback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15sp"
+                        app:cardBackgroundColor="@color/dark_green"
+                        app:cardCornerRadius="26sp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:padding="8sp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/baseline_arrow_back_24"
+                                app:tint="@color/Lavender" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8sp"
+                                android:layout_marginEnd="8sp"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Go Back"
+                                android:textColor="@color/Lavender" />
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="25sp"
+                        android:layout_marginTop="15sp"
+                        android:layout_toRightOf="@id/goback"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="Generate QR"
+                        android:textColor="@color/off_white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/goback"
+                        android:layout_marginStart="12sp"
+                        android:layout_marginTop="12sp"
+                        android:layout_marginEnd="12sp"
+                        android:layout_marginBottom="12sp"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="Create your secret code ;-)"
+                        android:textColor="@color/off_white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <EditText
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="12sp"
+                android:background="@drawable/round"
+                android:fontFamily="@font/poppins"
+                android:gravity="top"
+                android:hint="Your Message"
+                android:inputType="textMultiLine"
+                android:padding="12sp"
+                android:textColor="@color/off_white"
+                android:textColorHint="@color/Lavender" />
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/poppins"
+                android:padding="12sp"
+                android:text="@string/your_result_will_be_here"
+                android:textColor="@color/off_white" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="250sp"
+                android:layout_height="250sp"
+                android:layout_gravity="center"
+                android:layout_margin="12sp"
+                android:background="@drawable/round"
+                android:padding="15dp"
+                android:src="@drawable/qr_code" />
+
+            <Button
+                android:id="@+id/repeatbtn"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12sp"
+                android:backgroundTint="@color/dark_green"
+                android:fontFamily="@font/poppins"
+                android:padding="12sp"
+                android:text="Generate Code"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/save"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12sp"
+                android:backgroundTint="@color/dark_header"
+                android:fontFamily="@font/poppins"
+                android:padding="12sp"
+                android:text="Save Code"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

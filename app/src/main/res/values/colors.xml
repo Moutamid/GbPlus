@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="dark_green">#2E8B57</color>-->
+    <color name="dark_green">#6E44B6</color>
+    <color name="blue">#34B7F1</color>
+    <color name="green">#25D366</color>
+    <color name="dark_grey">#4F5861</color>
+    <color name="black">#FF000000</color>
+<!--    <color name="dark_header">#39750E</color>-->
+<!--    <color name="dark_bg">#295807</color>-->
+    <color name="dark_header">#8B5EBF</color>
+    <color name="dark_bg">#3D3B5B</color>
+    <color name="off_white">#F5F1ED</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Lavender">#EDE7F6</color>
+</resources>
