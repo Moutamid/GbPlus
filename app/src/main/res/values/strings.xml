@@ -3,6 +3,7 @@
     <string name="your_result_will_be_here">Your Result will be here...</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="Interstial_ID">IMG_16_9_APP_INSTALL#544602544195015_544618424193427</string>
+    <string name="Interstial_ID">544602544195015_544618424193427</string>
+<!--    <string name="Interstial_ID">IMG_16_9_APP_INSTALL#544602544195015_544618424193427</string>-->
     <string name="Banner_ID">IMG_16_9_APP_INSTALL#544602544195015_544618074193462</string>
 </resources>

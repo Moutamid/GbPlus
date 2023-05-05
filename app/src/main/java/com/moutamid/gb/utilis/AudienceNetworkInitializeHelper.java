@@ -12,10 +12,11 @@ public class AudienceNetworkInitializeHelper implements AudienceNetworkAds.InitL
 
     static void initialize(Context context) {
         if (!AudienceNetworkAds.isInitialized(context)) {
-            if (DEBUG) {
-                AdSettings.turnOnSDKDebugger(context);
-            }
-            AdSettings.setTestMode(BuildConfig.DEBUG);
+//            if (DEBUG) {
+//                AdSettings.turnOnSDKDebugger(context);
+//            }
+//            AdSettings.setTestMode(BuildConfig.DEBUG);
+            AdSettings.clearTestDevices();
             AudienceNetworkAds
                     .buildInitSettings(context)
                     .withInitListener(new AudienceNetworkInitializeHelper())

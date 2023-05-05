@@ -58,7 +58,7 @@ public class ShareAdapter extends RecyclerView.Adapter<ShareAdapter.StatusVH> {
             StrictMode.setVmPolicy(builder.build());
             Uri imageUri = null;
             if (item.getFilePath() != null) {
-                imageUri = FileProvider.getUriForFile(context, "com.moutamid.gbwhatstool.provider", item.getFile());
+                imageUri = FileProvider.getUriForFile(context, "com.moutamid.gb.provider", item.getFile());
             }
 
             Intent intent = new Intent(Intent.ACTION_SEND);

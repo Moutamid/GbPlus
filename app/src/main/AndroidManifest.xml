@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
@@ -79,9 +80,11 @@
                 android:resource="@xml/file_provider_paths" />
         </provider>
 
-<!--        <meta-data-->
-<!--            android:name="com.google.android.gms.ads.APPLICATION_ID"-->
-<!--            android:value="ca-app-pub-3940256099942544~3347511713"/>-->
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="544602544195015"/>
+
+        <provider android:authorities="com.facebook.app.FacebookContentProvider544602544195015"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true" />
 
     </application>
 
